@@ -1,104 +1,55 @@
-🪟 Windows Fresh Install Setup Guide
-This is my personal method for configuring a clean Windows installation with useful tools, privacy tweaks, and AI access bypass. Steps are organized in the proper order.
+# Windows Setup Guide
 
-✅ 1. Basic Setup
-🌐 Install Browser
-Download and install Chrome — the first thing you’ll need:
+This guide outlines my personal process for customizing and setting up a clean Windows installation.
 
-Download Chrome
+## 1. Windows Installation
 
-📝 Better Notepad
-Replace the default Windows Notepad with a modern alternative:
+If Windows is not yet installed, I highly recommend using [Rufus](https://rufus.ie/en/) for creating a bootable USB drive. When installing, choose a local user account and skip the Microsoft account login.
 
-Notepads by 0x7c13
+For a specific Windows 11 Enterprise LTSC 2024 x64 ISO, you can find a torrent link here: [en-us_windows_11_enterprise_ltsc_2024_x64_dvd_965cfb00.iso [Torrent] [4.77 ГБ, EN-US, install.wim]](https://www.comss.ru/download/page.php?id=13359). During installation, select the LTSC N version to avoid pre-installed Microsoft programs, except for Edge.
 
-📦 Install Office
-Get Microsoft Office from:
+## 2. Essential Software
 
-Download Microsoft Office
+*   **Google Chrome:** Download from [https://www.google.com/chrome/](https://www.google.com/chrome/)
+*   **Custom Notepad:** [Notepads](https://github.com/0x7c13/Notepads)
+*   **Microsoft Office:** Download from [https://www.microsoft.com/en-us/microsoft-365/download-office](https://www.microsoft.com/en-us/microsoft-365/download-office)
+*   **qBittorrent:** Download from [https://www.qbittorrent.org/download](https://www.qbittorrent.org/download)
 
-🔓 Activate Windows & Office
-Use Microsoft Activation Scripts (MAS):
+## 3. Activation (Windows and Office)
 
-powershell
-Copy
-Edit
+For Windows and Office activation, you can use the Microsoft Activation Scripts. More information can be found on their GitHub page: [https://github.com/massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts). A common method is to run the following command in PowerShell:
+```powershell
 irm https://get.activated.win | iex
-🌐 2. VPN & Geo-unblocking
-🛡️ Cloudflare WARP (Russian Route Bypass)
-Use this to bypass geo-blocks via WARP.
+```
 
-Generate config with this script:
+## 4. Bypassing Geo-Restrictions and AI Blocks
 
-bash-warp-generator
+### Cloudflare VPN (for bypassing geo-blocks)
 
-Use with:
+1.  Generate a WARP configuration using [bash-warp-generator](https://github.com/ImMALWARE/bash-warp-generator).
+2.  Download and install the [AmneziaWG Windows Client](https://github.com/amnezia-vpn/amneziawg-windows-client/releases).
+3.  Import the generated WARP configuration into AmneziaWG.
+4.  **Important:** You may need to adjust the `AllowedIPs` in the configuration to include specific IP ranges you need to bypass. A comprehensive list can be found here: [https://rockblack.su/vpn/dopolnitelno/diapazon-ip-adresov](https://rockblack.su/vpn/dopolnitelno/diapazon-ip-adresov).
 
-Amnezia WireGuard Client
+### Bypassing AI Blocks
 
-Important: Set the following in your WireGuard config:
+1.  Download and install [YogaDNS 1.21b (free)](https://www.comss.ru/download/page.php?id=7734).
+2.  Set up a new DNS server in YogaDNS with the following details:
+    *   Type: DOH
+    *   IP: `176.99.11.77`
+    *   URL: `https://xbox-dns.ru/dns-query`
+3.  **Optional:** You can add specific rules to this DOH server for services like Google AI:
+    *   `aistudio.google.com`
+    *   `alkalimakersuite-pa.clients6.google.com`
+    *   `waa-pa.clients6.google.com`
+4.  For other AI services, you can use the trusted DNS server from [https://www.comss.ru/page.php?id=7315](https://www.comss.ru/page.php?id=7315) (`https://router.comss.one/dns-query`).
 
-nginx
-Copy
-Edit
-AllowedIPs = 0.0.0.0/32, 8.8.4.0/24, 8.8.8.0/24, ...
-Or generate a specific range here:
+## 5. Development Tools
 
-IP Ranges Tool
+*   **Visual Studio Code (VSC):** Download from [https://code.visualstudio.com/download](https://code.visualstudio.com/download). After installing, you can download the RooCode extension and log in to [https://openrouter.ai/](https://openrouter.ai/).
 
-🤖 3. AI & DNS Bypass
-🧠 AI DNS Unblock with YogaDNS
-Install YogaDNS (free):
+## 6. Entertainment
 
-YogaDNS 1.21 Beta
-
-Add a custom DoH server:
-
-makefile
-Copy
-Edit
-Type: DoH  
-IP: 176.99.11.77  
-URL: https://xbox-dns.ru/dns-query
-Personal blocklist for this DoH (add manually):
-
-Copy
-Edit
-aistudio.google.com  
-alkalimakersuite-pa.clients6.google.com  
-waa-pa.clients6.google.com  
-🔒 Global DoH DNS for Most AI Services
-If you prefer a trusted setup:
-
-Comss Trusted DNS
-
-Direct DoH: https://router.comss.one/dns-query
-
-🛠️ 4. Developer Tools
-🧑‍💻 Visual Studio Code
-Download VS Code
-
-🔐 OpenRouter AI Access
-Create an account at openrouter.ai
-
-Download the roocode extension for VS Code.
-
-🎵 5. Media & Streaming
-🎧 Spotify (Ad-Free)
-Block Spotify ads:
-
-BlockTheSpot
-
-🌍 Bypass Spotify Premium with Hola VPN
-Hola VPN Chrome Extension
-
-Log in from India every 2 weeks to keep free Premium.
-
-📁 6. Torrents & Games
-📦 qBittorrent
-Download qBittorrent
-
-🎮 Game Resources
-SteamRIP
-
-Hydra Launcher (GitHub)
+*   **Spotify Ad Blocker:** Use [BlockTheSpot](https://github.com/mrpond/BlockTheSpot) to block ads on Spotify.
+*   **Hola VPN (for Spotify Premium):** Use the [Hola VPN Chrome extension](https://chromewebstore.google.com/detail/hola-vpn-your-website-unb/gkojfkhlekighikafcpjkiklfbnlmeio?hl=ru) to log in from India every two weeks to potentially access free premium features.
+*   **Games:** Check out [steamrip.com](https://steamrip.com/) and [Hydra Launcher](https://github.com/hydralauncher/hydra).
