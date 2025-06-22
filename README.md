@@ -19,7 +19,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 # Install Windows Terminal
 winget install Microsoft.WindowsTerminal -e --accept-source-agreements --accept-package-agreements
 # Install Notepads
-winget install "Notepads App"
+winget install "Notepads App" -e --accept-source-agreements --accept-package-agreements
 # Install Google Chrome
 winget install Google.Chrome -e --accept-source-agreements --accept-package-agreements
 # Install Visual Studio Code
