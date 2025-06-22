@@ -14,6 +14,8 @@ For a specific Windows 11 Enterprise LTSC 2024 x64 ISO, you can find a torrent l
 Here are some essential software installations using `winget`:
 
 ```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
 # Install Windows Terminal
 winget install Microsoft.WindowsTerminal -e --accept-source-agreements --accept-package-agreements
 # Install Notepads
