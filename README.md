@@ -6,7 +6,7 @@ This guide outlines my personal process for customizing and setting up a clean W
 
 If Windows is not yet installed, I highly recommend using [Rufus](https://rufus.ie/en/) for creating a bootable USB drive. When installing, choose a local user account and skip the Microsoft account login.
 
-For a specific Windows 11 Enterprise LTSC 2024 x64 ISO, you can find a torrent link here: [en-us_windows_11_enterprise_ltsc_2024_x64_dvd_965cfb00.iso [Torrent] [4.77 ГБ, EN-US, install.wim]]([https://www.comss.ru/download/page.php?id=13359](https://comss.cloud/en-us_windows_11_enterprise_ltsc_2024_x64_dvd_965cfb00.iso.torrent)). During installation, select the LTSC N version to avoid pre-installed Microsoft programs, except for Edge.
+For a specific Windows 11 Enterprise LTSC 2024 x64 ISO, you can find a torrent link here: [en-us_windows_11_enterprise_ltsc_2024_x64_dvd_965cfb00.iso [Torrent] [4.77 ГБ, EN-US, install.wim]](https://comss.cloud/en-us_windows_11_enterprise_ltsc_2024_x64_dvd_965cfb00.iso.torrent). During installation, select the LTSC N version to avoid pre-installed Microsoft programs, except for Edge.
 
 
 ## 2. Essential Software
