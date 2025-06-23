@@ -73,7 +73,7 @@ Start-Process "msiexec.exe" -ArgumentList "/i `"$env:TEMP\amneziawg.msi`" /quiet
 2.  Download and install [YogaDNS 1.21b (free)](https://www.comss.ru/download/page.php?id=7734).
 3.  Set up a new DNS server (for aistudio.google.com) in YogaDNS with the following details:
     *   Type: DOH
-    *   IP: `176.99.11.77`
+    *   IP: ``
     *   URL: `https://xbox-dns.ru/dns-query`
 4.  **Optional:** You can add specific rules to this DOH server for services like Google AI:
     *   `aistudio.google.com`
