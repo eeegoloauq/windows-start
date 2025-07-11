@@ -47,7 +47,9 @@ geek site https://fmhy.net/audiopiracyguide#audio-tools
 Start-Process -FilePath "cmd.exe" -ArgumentList "/k nvm i 24"
 Start-Process -FilePath "cmd.exe" -ArgumentList "/k nvm use 24"
 ```
-
+```powershell
+irm https://raw.githubusercontent.com/tomasklaen/uosc/HEAD/installers/windows.ps1 | iex
+```
 If winget isn't working because of the LTSC N version ('winget' is not recognized as an internal or external command, operable program or batch file.)
 ```powershell
 wget "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "$env:USERPROFILE\Downloads\winget.msixbundle"
