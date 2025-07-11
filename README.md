@@ -20,8 +20,8 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 winget install Microsoft.WindowsTerminal -e --accept-source-agreements --accept-package-agreements
 # Install Notepads
 winget install "Notepads App" -e --accept-source-agreements --accept-package-agreements
-# Install Google Chrome
-winget install Google.Chrome -e --accept-source-agreements --accept-package-agreements
+# Install Zen
+winget install -e --id=Zen-Team.Zen-Browser --accept-source-agreements --accept-package-agreements
 # Install Visual Studio Code
 winget install Microsoft.VisualStudioCode -e --accept-source-agreements --accept-package-agreements
 # Install Git
@@ -34,6 +34,14 @@ winget install --id=Microsoft.Office  -e
 winget install --id=OBSProject.OBSStudio  -e
 # Install qBittorrent
 winget install --id=qBittorrent.qBittorrent  -e
+# geek uninstaller
+winget install -e --id=GeekUninstaller.GeekUninstaller
+# soulseek
+winget install -e --id=Soulseek.SoulseekQt --accept-source-agreements --accept-package-agreements
+
+download music hi-res https://dab.yeet.su/
+
+geek site https://fmhy.net/audiopiracyguide#audio-tools
 
 # Install and use Node.js version 24 using NVM
 Start-Process -FilePath "cmd.exe" -ArgumentList "/k nvm i 24"
